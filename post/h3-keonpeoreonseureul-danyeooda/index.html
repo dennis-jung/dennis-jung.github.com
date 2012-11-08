@@ -230,65 +230,121 @@
 <p>먼저 하루프레스부터 살펴보면, <a href="http://pages.github.com/">GitHub의 Page 서비스</a> | <a href="https://docs.google.com/document/d/1JWRn9bDN3YyeMRn2FpWYAuco5jZYefF_0kYD-fIlu50/edit?pli=1">번역</a>를 이용하여, 정적 페이지를 생성해주는 플랫폼입니다.</p><p>GitHub에서 사용자 페이지를 지원해주는건 이번에 알게 되었습니다. </p><p>사용자 페이지를 이용하면, 호스팅을 하지않고, 홈페이지 구축이 가능하고, 도메인 연결도 가능하니, 일반인은 어렵겠지만, 개발자라면, 충분히 괜찮은 선택이 될 것 같습니다.</p><p>GitHub의 페이지 서비스는 따로 포스팅해야 할 것 같습니다.</p><p>다시 돌아와, 하루프레스는 개발자스럽게(?), 빠르게, 블로그 포스팅이 가능하다는게 장점입니다.</p><p>스크립트를 통해 포스팅을 작성하고, 서버에 배포 하는 방식입니다.</p><p>단점으로는 GUI가 지원되지 않고, GitHub(git), nodejs, javascript에 대한 지식이 조금 있어야합니다.</p><p>MarkDown, DropBox 지원, 웹 프리젠테이션도 가능하네요.</p><p>지금 보고 계신 포스팅도 하루프레스로 작성되었습니다. </p><p>서비스 초기라서 메뉴얼이나 이런것들이 많이 정리되어 있지 않고, 메뉴얼에 나온 정보들이 최신 버전이 아닌것도 보였습니다. 그래서 전 많은 삽질을… ㅎㅎ</p><p>설치형 블로그를 원하신다면, 그리고 개발자스러운 블로그를 원한다면, 나쁘지 않은 괜찮은 선택이 될수 있을 것 같습니다.
 (KTH에서도 꽤 밀고 있는 걸로 봐서, 업데이트도 잘 되지 않을까욤? ㅎㅎ)</p><p>최근 느끼는 불편함은… 이동중에 포스팅을 하기가 어렵네요… 다른 PC라면 드랍박스를 이용하면 될 것 같은데, 방법이 없으려나~ 음</p>
 <ul>
-<li><p>발표자료
-<iframe src="http://www.slideshare.net/slideshow/embed_code/14980579" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/rhio.kim/ss-14980579" title="우리가 모르는 노드로 할 수 있는 몇가지" target="_blank">우리가 모르는 노드로 할 수 있는 몇가지</a> </strong> from <strong><a href="http://www.slideshare.net/rhio.kim" target="_blank">Rhio Kim</a></strong> </div></p></li>
-<li><p>H3 컨퍼런스 하루프레스 소개 영상이 올라왔네요.
-<iframe src="http://player.vimeo.com/video/52616124?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/52616124">H3 Conference 2012 하루프레스 소개 영상</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p></p></li>
+<li>발표자료</li>
 </ul>
 
-<h5 id="toc_8">* 아두이노를 이용한 홈 자동화 시스템</h5>
-<p>아두이노라고 들어보셨나요? 전 이번에 처음 들어봤는데요. 일전에 팀의 박모 대리님이 안드로이드 얼굴 인식 카메라 만든 것 같이 하드웨어(센서)와 소프트웨어를 연동하는 것이였는데, 엄청 신기했습니다. ㅎㅎ</p><p>아두이노(Arduino)는 오픈소스를 기반으로 한 피지컬 컴퓨팅 플랫폼으로, AVR을 기반으로 한 보드와 소프트웨어 개발을 위한 통합 환경(IDE)를 제공한다. 아두이노는 많은 스위치나 센서로부터 값을 받아들여, LED나 모터와 같은 것들을 통제함으로써 환경과 상호작용이 가능한 물건을 만들어낼 수 있다. 또한 플래시, 프로세싱, Max/MSP와 같은 소프트웨어를 연동할 수 있다.
-<a href="http://ko.wikipedia.org/wiki/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8">출처:위키</a></p><p>섹션에 시연을 보여주셨는데, Nodejs를 통해 웹으로 실내등, 온도, 조도, 등을 제어 했습니다.</p><p><img src="./@img/IMG_4423.JPG" width="544" height="489"/></p><p>재밌더라구요… </p><p>시연 준비 하시느라 돈도 꽤 많이 들었다며, 좀더 쉽게 할 수 있는 BeagleBon이나 Rasberry PI를 이용할 수 있다는데, 모두 linux와 nodejs가 설치되어 있으며, 가격도 더 저렴하다고 한다.</p><p>개인적으로 알아보니, <a href="http://www.raspberrypi.org/">Rasberry PI</a>의 경우, 영국에서 만든 제품인데,  An ARM GNU/Linux box for $25. Take a byte!라고 홈페이지에 소개 되어 있지만, 싸게 팔지 않습니다… 우리나라에서도 팔긴하는데, (직배인듯 합니다.) 5만원 정도네요…</p><p>이것저것 만지는거 좋아하시는 분들이라면, Arduino가 괜찮을 것 같습니다. ㅎㅎ</p>
-<h3 id="toc_9">3. 스마트모바일 환경에서의 App.품질관리전략</h3>
-<p>사실, 3번 섹션에 대해 정말 큰 기대를 갖고 있었는데요. 실망하기 그지 없었습니다…</p><p>요즘 관심 갖고 있는 모바일 자동화 테스트에 대해 어떤 이야길 해주려나~~ 하는 생각에 갔었는데, 발표자는 &quot;모바일 자동화 테스트를 하기 위해서는 스크립트를 작성해야하는데, 스크립트 하나 작성하는데 숙련자의 경우 15분이 소요된다. 그래서 우리는 포기했다. 손으로 한다…&quot; 이런 이야길 하시더군요. 아…</p><p>운좋게도 맨 앞자리에 앉아 있었는데…</p><p>게다가 내용은 JIRA 이야기가 대부분 이였습니다.</p><p>뭐라라까요… 품질관리 전략을 위해서는 애자일스럽게 일해라… 이게 결론으로 느껴졌습니다. ㅠ_ㅠ</p>
-<h2 id="toc_10">4. 꽃보다 스칼라 - 김상범</h2>
-<p>스칼라라고 들어보셨나요? 요즘 뜨고 있는 언어라는데요.</p><p>위키백과에서 찾아본 스칼라의 정의는 다음과 같습니다.
-스칼라(Scala)는 객체 지향 프로그래밍 언어와 함수형 프로그래밍의 요소가 결합된 다중패러다임 프로그래밍 언어이다. 스칼라의 이름은 <skah-lah>라고 발음하며 &#39;Scalable Language&#39;에서 따왔다. 적은 양의 코드로도 방대한 규모의 시스템을 작성할 수 있다는 특징이 있다.[2] 자바의 자바 가상 머신 에서 실행 할 수 있으며 자바의 API도 그대로, 혹은 스칼라의 형식에 맞춰 약간 수정한 형태로 사용 할 수 있다. <a href="http://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4)">출처: 위키백과</a></p><p>&quot;자바의 가상머신에서 실행 할 수 있다.&quot; 라는 부분에서 재밌었습니다. 제가 요즘 개발하고 있는 안드로이드에서도 동작한다고 하네요. (300k 정도의 라이브러리가 포함된다면…)</p><p>장점이라면, 객체 지향 프로그래밍 언어와 함수형 프로그래밍의 요소의 결합과 자바 API의 적용을 통해 생산성 향상에 도움을 주는데, &quot;같은 기능을 하는 프로그램을 작성했을 때 자바로 작성했을 때에 비해 2-3배의 코드 길이가 줄어든다.&quot;고 합니다.</p><p>발표자는 우리가 작성하는 프로그래밍의 버그는 작성한 코드의 양에 비례한다. 그러므로 작성된 코드의 양이 적을 수록 버그는 적다. 라고 이야기했습니다. 어느 정도 일리가 있지 않나요?</p>
-<h5 id="toc_11">- 스칼라의 인기는 어느정도 일까요?</h5>
-<p><img src="./@img/dataists-anguage-rankings.jpg" alt="dataists-anguage-rankings"></p><p><a href="http://redmonk.com/sogrady/2011/09/06/dataists-anguage-rankings/">출처: http://redmonk.com/sogrady/2011/09/06/dataists-anguage-rankings/</a></p><p>스칼라는 java, c++, c#, ruby, objective-c 같은 생업을 위한 언어(Tier1)가 아닌 부분, Tier2에서 가장 인기가 많은 언어입니다.</p>
-<h5 id="toc_12">- 전체 프로그래밍 언어에서 스칼라는 아주 작은 포지션을 갖고 있습니다.</h5>
-<p>하지만 점점 성장하고 있죠…
-<img src="./@img/scala_Job_Trends.png" alt="scala Job Trends"></p><p>2012년 1월 포지셔닝은 0.03… 정도입니다… ㅠ_ㅠ</p><p><a href="http://www.scala-lang.org/node/10923">출처: http://www.scala-lang.org/node/10923</a></p><p>저는 이 섹션을 들으면서 문법이 마치 정규식 같다고 느꼈습니다. 축약되는 문법을 보면 볼수록 얼마전 보았던 &quot;<a href="http://www.yes24.com/24/Goods/3475120?Acode=101">손에 잡히는 정규표현식</a>&quot;이 어찌나 떠오르던지 ㅎㅎ</p><p>스칼라에 대해 검색을 좀 해보니 <a href="http://docs.scala-lang.org/ko/tutorials/scala-for-java-programmers.html">자바 프로그래머를 위한 스칼라 튜토리얼</a>이 있네요.</p><p>자바에 익숙하다면, 또는 스칼라에 대해 관심이 조금 생기셨다면 한번 도전 해보시는 건 어떨까요?</p>
-<h2 id="toc_13">5. 행복한 개발을 위한 테스트케이스</h2>
-<p>이 섹션은 TDD 교육과 같은 느낌이였고, 테스트코드 작성은 한글로 해도 된다. 테스트 코드가 통과하면 이 코드는 적어도 보장된 코드이다. 등의 약간은 베이직한 내용이 였습니다.</p>
-<h2 id="toc_14">6. 오픈소스로 개발 실력 쌓기</h2>
-<p>마지막 섹션이여서, 좀 지친것도 있었는데, 발표자가 그런 부분을 잘 아시고, 선물 공세를 통해 청중의 집중력을 키워줬습니다. ㅋㅋ</p><p>개발자라면 누구나 오픈소스에 대한 도전의식이 있을텐데요, 섹션에서도 나왔지만, 국내 오픈소스 사용률은 전세계 탑에 든다. 하지만, 커미터는 거의 없다. 이부분에 대해 공감합니다. ㅎㅎ</p><p>저도 시도는 해보았지만, 항상 실패에 끝났었던것 같아요.</p><p>좋은 개발자란 무엇을까요? 라는 질문에 저는 한참을 고민했습니다.
-일을 잘하는 개발자가 좋은 개발자일까? 커뮤니케이션의 달인이 좋은 개발자일까? … 발표자 다음 일들을 실천하는 사람이라고 이야기했습니다.</p>
-<ul>
-<li>원하는 것을 개발할 수 있다.</li>
-<li>컴퓨터로 일하는 것이 아니라 컴퓨터에게 일을 시키는 사람</li>
-<li>좋은 정보(최신, 고전)를 계속 습득</li>
-<li>정보를 공유</li>
-</ul>
-<p>회사 센터장님이 일전에 말씀하셨던 이야기가 떠오릅니다. &quot;개발자는 게을러야한다. 게을르기위해 자신 주위의 반복적인 작업들을 자동화하고, 다른 창의적인 생각을 할 수 있다고…&quot;</p><p>발표자는 오픈소스를 분석하기 위한 몇가지 팁을 이야기 했습니다.
-(1주일이 지났더니, 기억이..ㅠ_ㅠ)</p>
-<ol>
-<li>거대 프로젝트를 바라볼때, 1000피트의 뷰를 가져라.
+<iframe src="http://www.slideshare.net/slideshow/embed_code/14980579" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/rhio.kim/ss-14980579" title="우리가 모르는 노드로 할 수 있는 몇가지" target="_blank">우리가 모르는 노드로 할 수 있는 몇가지</a> </strong> from <strong><a href="http://www.slideshare.net/rhio.kim" target="_blank">Rhio Kim</a></strong> </div>
 
-<ul>
-<li>너무 높은 곳에서, 또는 낮은곳에서 코드를 보면 큰그림을 보기 어렵다. 적당한 높이를 유지해라.</li>
-</ul></li>
-<li>Visualization 도구를 이용해라.
+* H3 컨퍼런스 하루프레스 소개 영상이 올라왔네요.
 
-<ul>
-<li><a href="http://stan4j.com">Stan4J</a>
+<iframe src="http://player.vimeo.com/video/52616124?badge=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/52616124">H3 Conference 2012 하루프레스 소개 영상</a> from <a href="http://vimeo.com/rhio">rhiokim</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 
-<ul>
-<li>전체 아키텍쳐를 쉽게 이해할 수 있도록 도와줍니다.
-<img src="./@img/gallery.gif" alt="">
-<iframe width="640" height="480" src="http://www.youtube.com/embed/s9K9m4HFgS4" frameborder="0" allowfullscreen></iframe>
-<a href="http://stan4j.com/">출처: http://stan4j.com/</a></li>
-</ul></li>
-<li><a href="http://marketplace.eclipse.org/content/debug-visualisation-eclipse#.UJm0COOTt9Q">Debug Visualisation</a>
 
-<ul>
-<li>디버그 모드에서 변수들에 대한 구조를 조금도 시각화 하여 보여줍니다.
-<img src="./@img/dv_screenshot.png" alt=""><br>
-<a href="http://code.google.com/a/eclipselabs.org/p/debugvisualisation/?redir=1">출처: http://code.google.com/a/eclipselabs.org/p/debugvisualisation/?redir=1</a></li>
-</ul></li>
-</ul></li>
-</ol>
-<p>오픈소스 분석은 자신의 개발스킬을 한단계 업그레이드 할수있습니다.
+##### * 아두이노를 이용한 홈 자동화 시스템
+아두이노라고 들어보셨나요? 전 이번에 처음 들어봤는데요. 일전에 팀의 박모 대리님이 안드로이드 얼굴 인식 카메라 만든 것 같이 하드웨어(센서)와 소프트웨어를 연동하는 것이였는데, 엄청 신기했습니다. ㅎㅎ
+
+아두이노(Arduino)는 오픈소스를 기반으로 한 피지컬 컴퓨팅 플랫폼으로, AVR을 기반으로 한 보드와 소프트웨어 개발을 위한 통합 환경(IDE)를 제공한다. 아두이노는 많은 스위치나 센서로부터 값을 받아들여, LED나 모터와 같은 것들을 통제함으로써 환경과 상호작용이 가능한 물건을 만들어낼 수 있다. 또한 플래시, 프로세싱, Max/MSP와 같은 소프트웨어를 연동할 수 있다.
+[출처:위키](http://ko.wikipedia.org/wiki/%EC%95%84%EB%91%90%EC%9D%B4%EB%85%B8)
+
+섹션에 시연을 보여주셨는데, Nodejs를 통해 웹으로 실내등, 온도, 조도, 등을 제어 했습니다.
+
+<img src="./@img/IMG_4423.JPG" width="544" height="489"/>
+
+재밌더라구요… 
+
+시연 준비 하시느라 돈도 꽤 많이 들었다며, 좀더 쉽게 할 수 있는 BeagleBon이나 Rasberry PI를 이용할 수 있다는데, 모두 linux와 nodejs가 설치되어 있으며, 가격도 더 저렴하다고 한다.
+
+개인적으로 알아보니, [Rasberry PI](http://www.raspberrypi.org/)의 경우, 영국에서 만든 제품인데,  An ARM GNU/Linux box for $25. Take a byte!라고 홈페이지에 소개 되어 있지만, 싸게 팔지 않습니다… 우리나라에서도 팔긴하는데, (직배인듯 합니다.) 5만원 정도네요…
+
+이것저것 만지는거 좋아하시는 분들이라면, Arduino가 괜찮을 것 같습니다. ㅎㅎ
+
+
+### 3. 스마트모바일 환경에서의 App.품질관리전략
+사실, 3번 섹션에 대해 정말 큰 기대를 갖고 있었는데요. 실망하기 그지 없었습니다…
+
+요즘 관심 갖고 있는 모바일 자동화 테스트에 대해 어떤 이야길 해주려나~~ 하는 생각에 갔었는데, 발표자는 "모바일 자동화 테스트를 하기 위해서는 스크립트를 작성해야하는데, 스크립트 하나 작성하는데 숙련자의 경우 15분이 소요된다. 그래서 우리는 포기했다. 손으로 한다…" 이런 이야길 하시더군요. 아…
+
+운좋게도 맨 앞자리에 앉아 있었는데…
+
+게다가 내용은 JIRA 이야기가 대부분 이였습니다.
+
+뭐라라까요… 품질관리 전략을 위해서는 애자일스럽게 일해라… 이게 결론으로 느껴졌습니다. ㅠ_ㅠ
+
+
+## 4. 꽃보다 스칼라 - 김상범
+스칼라라고 들어보셨나요? 요즘 뜨고 있는 언어라는데요.
+
+위키백과에서 찾아본 스칼라의 정의는 다음과 같습니다.
+스칼라(Scala)는 객체 지향 프로그래밍 언어와 함수형 프로그래밍의 요소가 결합된 다중패러다임 프로그래밍 언어이다. 스칼라의 이름은 <skah-lah>라고 발음하며 'Scalable Language'에서 따왔다. 적은 양의 코드로도 방대한 규모의 시스템을 작성할 수 있다는 특징이 있다.[2] 자바의 자바 가상 머신 에서 실행 할 수 있으며 자바의 API도 그대로, 혹은 스칼라의 형식에 맞춰 약간 수정한 형태로 사용 할 수 있다. [출처: 위키백과](http://ko.wikipedia.org/wiki/%EC%8A%A4%EC%B9%BC%EB%9D%BC_\(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D_%EC%96%B8%EC%96%B4\))
+
+"자바의 가상머신에서 실행 할 수 있다." 라는 부분에서 재밌었습니다. 제가 요즘 개발하고 있는 안드로이드에서도 동작한다고 하네요. (300k 정도의 라이브러리가 포함된다면…)
+
+장점이라면, 객체 지향 프로그래밍 언어와 함수형 프로그래밍의 요소의 결합과 자바 API의 적용을 통해 생산성 향상에 도움을 주는데, "같은 기능을 하는 프로그램을 작성했을 때 자바로 작성했을 때에 비해 2-3배의 코드 길이가 줄어든다."고 합니다.
+
+발표자는 우리가 작성하는 프로그래밍의 버그는 작성한 코드의 양에 비례한다. 그러므로 작성된 코드의 양이 적을 수록 버그는 적다. 라고 이야기했습니다. 어느 정도 일리가 있지 않나요?
+
+##### - 스칼라의 인기는 어느정도 일까요?
+
+![dataists-anguage-rankings](./@img/dataists-anguage-rankings.jpg)
+
+[출처: http://redmonk.com/sogrady/2011/09/06/dataists-anguage-rankings/](http://redmonk.com/sogrady/2011/09/06/dataists-anguage-rankings/)
+
+스칼라는 java, c++, c#, ruby, objective-c 같은 생업을 위한 언어(Tier1)가 아닌 부분, Tier2에서 가장 인기가 많은 언어입니다.
+
+
+##### - 전체 프로그래밍 언어에서 스칼라는 아주 작은 포지션을 갖고 있습니다.
+
+하지만 점점 성장하고 있죠…
+![scala Job Trends](./@img/scala_Job_Trends.png)
+
+2012년 1월 포지셔닝은 0.03… 정도입니다… ㅠ_ㅠ
+
+[출처: http://www.scala-lang.org/node/10923](http://www.scala-lang.org/node/10923)
+
+저는 이 섹션을 들으면서 문법이 마치 정규식 같다고 느꼈습니다. 축약되는 문법을 보면 볼수록 얼마전 보았던 "[손에 잡히는 정규표현식](http://www.yes24.com/24/Goods/3475120?Acode=101)"이 어찌나 떠오르던지 ㅎㅎ
+
+스칼라에 대해 검색을 좀 해보니 [자바 프로그래머를 위한 스칼라 튜토리얼](http://docs.scala-lang.org/ko/tutorials/scala-for-java-programmers.html)이 있네요.
+
+자바에 익숙하다면, 또는 스칼라에 대해 관심이 조금 생기셨다면 한번 도전 해보시는 건 어떨까요?
+
+
+## 5. 행복한 개발을 위한 테스트케이스
+이 섹션은 TDD 교육과 같은 느낌이였고, 테스트코드 작성은 한글로 해도 된다. 테스트 코드가 통과하면 이 코드는 적어도 보장된 코드이다. 등의 약간은 베이직한 내용이 였습니다.
+
+
+## 6. 오픈소스로 개발 실력 쌓기
+마지막 섹션이여서, 좀 지친것도 있었는데, 발표자가 그런 부분을 잘 아시고, 선물 공세를 통해 청중의 집중력을 키워줬습니다. ㅋㅋ
+
+개발자라면 누구나 오픈소스에 대한 도전의식이 있을텐데요, 섹션에서도 나왔지만, 국내 오픈소스 사용률은 전세계 탑에 든다. 하지만, 커미터는 거의 없다. 이부분에 대해 공감합니다. ㅎㅎ
+
+저도 시도는 해보았지만, 항상 실패에 끝났었던것 같아요.
+
+좋은 개발자란 무엇을까요? 라는 질문에 저는 한참을 고민했습니다.
+일을 잘하는 개발자가 좋은 개발자일까? 커뮤니케이션의 달인이 좋은 개발자일까? … 발표자 다음 일들을 실천하는 사람이라고 이야기했습니다.
+
+- 원하는 것을 개발할 수 있다.
+- 컴퓨터로 일하는 것이 아니라 컴퓨터에게 일을 시키는 사람
+- 좋은 정보(최신, 고전)를 계속 습득
+- 정보를 공유
+
+회사 센터장님이 일전에 말씀하셨던 이야기가 떠오릅니다. "개발자는 게을러야한다. 게을르기위해 자신 주위의 반복적인 작업들을 자동화하고, 다른 창의적인 생각을 할 수 있다고…"
+
+발표자는 오픈소스를 분석하기 위한 몇가지 팁을 이야기 했습니다.
+(1주일이 지났더니, 기억이..ㅠ_ㅠ)
+
+1. 거대 프로젝트를 바라볼때, 1000피트의 뷰를 가져라.
+    - 너무 높은 곳에서, 또는 낮은곳에서 코드를 보면 큰그림을 보기 어렵다. 적당한 높이를 유지해라.
+2. Visualization 도구를 이용해라.
+    - [Stan4J](http://stan4j.com)
+        - 전체 아키텍쳐를 쉽게 이해할 수 있도록 도와줍니다.
+        ![](./@img/gallery.gif)
+       <iframe width="640" height="480" src="http://www.youtube.com/embed/s9K9m4HFgS4" frameborder="0" allowfullscreen></iframe>
+<pre><code class="">   [출처: http://stan4j<span class="preprocessor">.com</span>/](http://stan4j<span class="preprocessor">.com</span>/)
+- [Debug Visualisation](http://marketplace<span class="preprocessor">.eclipse</span><span class="preprocessor">.org</span>/content/debug-visualisation-eclipse<span class="preprocessor">#.UJm0COOTt9Q)</span>
+   - 디버그 모드에서 변수들에 대한 구조를 조금도 시각화 하여 보여줍니다.
+   ![](./@img/dv_screenshot<span class="preprocessor">.png</span>)    
+   [출처: http://code<span class="preprocessor">.google</span><span class="preprocessor">.com</span>/a/eclipselabs<span class="preprocessor">.org</span>/p/debugvisualisation/?redir=<span class="number">1</span>](http://code<span class="preprocessor">.google</span><span class="preprocessor">.com</span>/a/eclipselabs<span class="preprocessor">.org</span>/p/debugvisualisation/?redir=<span class="number">1</span>)
+</code></pre><p>오픈소스 분석은 자신의 개발스킬을 한단계 업그레이드 할수있습니다.
 저도 공감하구요.</p><p>오늘부터 도전해보시겠어요? <sup>.^</sup></p>
 <ul>
 <li>금일 올라온 발표자료입니다.</li>
@@ -296,7 +352,7 @@
 <iframe src="http://www.slideshare.net/slideshow/embed_code/15042338" width="590" height="480" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="http://www.slideshare.net/kthcorp/h3-2012-15042338" title="[H3 2012] 오픈소스로 개발 실력 쌓기" target="_blank">[H3 2012] 오픈소스로 개발 실력 쌓기</a> </strong> from <strong><a href="http://www.slideshare.net/kthcorp" target="_blank">KTH, 케이티하이텔</a></strong> </div></li>
 </ul>
 
-<h2 id="toc_15">마치며…</h2>
+<h2 id="toc_8">마치며…</h2>
 <p>개인적으로는 자극이 되었던 컨퍼런스였습니다. 조금 풀어진 마음을 다시 잡을 수 있었고, 앞으로 나아가야 할 방향에 대해서도 고민을 할 수 있었던 시간이였던 것 같습니다.</p><p>H3 컨퍼런스에서 가장 좋았던 것은, 컨퍼런스의 내용이 담긴 책을 준다는 것이였습니다. 책에는 섹션의 발표자료가 아닌 섹션에서 말하고자 하는 것을 풀어서 설명해 놓았고, 추가적인 내용도 있어서 이해에 도움이 많이 되었습니다.</p><p><img src="./@img/IMG_4485.JPG" width="288" height="384"/></p><p>** <a href="http://dev.kthcorp.com/wp-content/uploads/2012/11/H3_2012_single_sided.pdf">다운로드</a></p><p>이제, 저는 아두이노에 관심있는 분들 모아서 스터디 함 해봐야겠습니다. ㅎㅎ</p>
                         </div>
                         <hr />
