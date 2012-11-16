@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>참조은가습기 구매! |  THLIFE Blog</title>
+    <title>Mockito on Android |  THLIFE Blog</title>
     <meta name="description" content="My story about software development and life.">
     <meta name="author" content="taehoonjung">
     <meta name="keywords" content="iphone,android" />
@@ -110,7 +110,7 @@
                     <h3>About this Article</h3>
                     <p>
                         <h5>Date Released:</h5>
-                        <span>Thursday, November 15 2012 4:56 PM</span>
+                        <span>Friday, November 16 2012 4:47 PM</span>
                     </p>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                     <div class="well bg">
                         
                         <div class="page-header">
-                            <h1>참조은가습기 구매!</h1>
+                            <h1>Mockito on Android</h1>
                         </div>
 
                         
@@ -183,7 +183,7 @@
                                             
                         <div class="pull-right">
                             <!-- Place this tag where you want the +1 button to render -->
-                            <g:plusone href="/post/camjoeungaseubgi-gumae" size="medium"></g:plusone>
+                            <g:plusone href="/post/mockito-on-android" size="medium"></g:plusone>
 
                             <!-- Place this render call where appropriate -->
                             <script type="text/javascript">
@@ -198,31 +198,76 @@
 
                                             
                         <div class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="참조은가습기 구매! -" data-url="http://thlife.net/post/camjoeungaseubgi-gumae" data-via="dennis_jung">Tweet</a>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="Mockito on Android -" data-url="http://thlife.net/post/mockito-on-android" data-via="dennis_jung">Tweet</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                         </div>
                     
 
                         <div class="markdown-wrapper">
-                            <p>사무실이 너무 건조해서, 몇주전부터 기침이 계속 되었다.</p><p>게다가 가뜩이나 건조한 눈이 더 건조해져서 아침마다 눈뜰때 힘들다. ㅠ_ㅠ</p><p>가습기를 써야겠다는 생각이 들었는데,</p>
+                            <p>요즘 가장 큰 관심은, &quot;어떻게 버그를 생성하지 않을까?&quot; 입니다.</p><p>그래서 TDD부터 시작해 보기로 했습니다.</p><p>Assert만으로는 부족하다고 느껴졌고, mockito를 적용하기로 했습니다.</p><p><img src="http://mockito.googlecode.com/svn/wiki/images/logo.jpg" alt="mockito"></p>
+<h3 id="toc_19">환경 셋팅</h3>
+
+<hr>
+
 <ol>
-<li>관리가 편할것</li>
-<li>가격이 저렴</li>
+<li><strong><a href="http://code.google.com/p/mockito/">mockito</a></strong> 다운로드</li>
+<li>안드로이드에서 mockito를 사용하기 위해서는 <a href="http://code.google.com/p/dexmaker/">dexmaker</a> 라는 라이브러리가 추가로 필요하다.
+
+<ul>
+<li>dexmaker는 Dalvik VM을 대상으로 런타임 코드를 생성하는 자바 API이다.</li>
+<li><strong><a href="http://code.google.com/p/dexmaker/">dexmaker</a></strong> 다운로드</li>
+<li>dexmaker-1.0.jar, dexmaker-mockito-1.0.jar 2개 모두 필요합니다.</li>
+</ul></li>
+<li>tests/libs 폴더에 다운로드 받은 jar 파일들을 넣으면 됩니다.</li>
 </ol>
-<p>두가지 조건을 충족할 만한 제품들을 찾아봤다.</p><p>그중 자연가습기인 &quot;<a href="http://www.enputech.com/shop_html/shop/view.html?uid=40&amp;category=04000000">참조은가습기</a>&quot; 라는 제품이 눈에 띄였다.</p><p><img src="./@img/IMG_4653.JPG" width="384" height="288"/></p><p>위 사진의 것인데, 일단 전기가 필요없다 ㅋㅋ</p><p>관리도 가이드에서는 1달에 2번만 청소하면 된다고 하는데, 청소 방법도 엄청 쉽다 ㅎㅎ</p><p>식기세척기에 넣거나, 식초물에 넣고 몇시간 뒤에 행구면 된다고 한다.</p><p>가격도 3만원 초반대의 가격 (저는 31,000원에 구매)</p><p>미국 아마존에서도 인기가 꽤 있다고 하던데, ㅎㅎ</p><p>&quot;수건 12장을 걸어놓는 효과&quot;라고 하는데, 써보고 괜찮으면 집에도 하나 놔야겠다.</p><p>기침 좀 없어졌으면 좋겠네… </p>
+
+<h3 id="toc_20">테스트 코드 작성</h3>
+
+<hr>
+
+<ul>
+<li>test 코드 상단에 Mockito를 import 하고, 테스트 코드를 작성합니다.</li>
+</ul>
+<pre><code class="">    import static org<span class="preprocessor">.mockito</span><span class="preprocessor">.Mockito</span>.*<span class="comment">;</span>
+
+    @SmallTest
+    public void testMock() {
+        List&lt;?> mock = mock(List<span class="preprocessor">.class</span>)<span class="comment">;</span>
+        when(mock<span class="preprocessor">.size</span>())<span class="preprocessor">.thenReturn</span>(<span class="number">1</span>)<span class="comment">;</span>
+
+        assertEquals(mock<span class="preprocessor">.size</span>(), <span class="number">1</span>)<span class="comment">;</span>
+        verify(mock)<span class="preprocessor">.size</span>()<span class="comment">;</span>
+    }
+
+</code></pre><p>그 다음 mock을 이용해서 테스트 코드를 작성하면 됩니다.</p><p>Device에서 테스트 할때에는 문제가 없었는데, CI Emulator에서 테스트 코드를 실행하니 다음과 같은 에러가 발생했습니다.</p><pre><code class="">     <span class="matrix">[exec]</span> <span class="transposed_variable">com.</span>~~.SampleTest:...........
+     <span class="matrix">[exec]</span> Error in testSample:
+     <span class="matrix">[exec]</span> <span class="transposed_variable">java.</span><span class="transposed_variable">lang.</span>IllegalArgumentException: dexcache == null (and no default could be found; consider setting the <span class="string">'dexmaker.dexcache'</span> system property)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">com.</span><span class="transposed_variable">google.</span><span class="transposed_variable">dexmaker.</span><span class="transposed_variable">DexMaker.</span>generateAndLoad(<span class="transposed_variable">DexMaker.</span>java:<span class="number">359</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">com.</span><span class="transposed_variable">google.</span><span class="transposed_variable">dexmaker.</span><span class="transposed_variable">stock.</span><span class="transposed_variable">ProxyBuilder.</span>buildProxyClass(<span class="transposed_variable">ProxyBuilder.</span>java:<span class="number">252</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">com.</span><span class="transposed_variable">google.</span><span class="transposed_variable">dexmaker.</span><span class="transposed_variable">mockito.</span><span class="transposed_variable">DexmakerMockMaker.</span>createMock(<span class="transposed_variable">DexmakerMockMaker.</span>java:<span class="number">54</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">org.</span><span class="transposed_variable">mockito.</span><span class="transposed_variable">internal.</span><span class="transposed_variable">util.</span><span class="transposed_variable">MockUtil.</span>createMock(<span class="transposed_variable">MockUtil.</span>java:<span class="number">26</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">org.</span><span class="transposed_variable">mockito.</span><span class="transposed_variable">internal.</span><span class="transposed_variable">MockitoCore.</span>mock(<span class="transposed_variable">MockitoCore.</span>java:<span class="number">49</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">org.</span><span class="transposed_variable">mockito.</span><span class="transposed_variable">Mockito.</span>mock(<span class="transposed_variable">Mockito.</span>java:<span class="number">1245</span>)
+     <span class="matrix">[exec]</span>     at <span class="transposed_variable">org.</span><span class="transposed_variable">mockito.</span><span class="transposed_variable">Mockito.</span>mock(<span class="transposed_variable">Mockito.</span>java:<span class="number">1139</span>)
+...
+</code></pre><p>이런 문제가 발생하더구요. </p><p><a href="http://stackoverflow.com/questions/12267572/mockito-dexmaker-on-android">StackOverFlow</a>의 도움을 받아 해결했습니다.</p><p>해결 방법은 생성자에 다음과 같은 코드를 추가했습니다.</p><pre><code class="">    <span class="keyword">public</span> AlbumSetHelperTest() {
+        <span class="comment">//if target is emulator, it is necessary to set property.</span>
+        <span class="keyword">if</span> (<span class="string">"google_sdk"</span><span class="variable">.equals</span>(Build<span class="variable">.PRODUCT</span>)) {
+            System<span class="variable">.setProperty</span>(<span class="string">"dexmaker.dexcache"</span>, <span class="string">"/sdcard"</span>);
+        }
+    }
+</code></pre><p>이렇게 이슈는 해결했는데, 그렇다면 테스트 코드마다 다 넣어야 할까요? </p><p>고민에 빠졌습니다. ㅠ_ㅠ</p><p><em class="label "><strong><a href="http://code.google.com/p/mockito/">mockito</a></strong></em>
+<em class="label "><strong><a href="http://code.google.com/p/dexmaker/">dexmaker</a></strong></em>
+<em class="label "><strong><a href="http://corner.squareup.com/2012/10/mockito-android.html">Mockito on Android</a></strong></em></p>
                         </div>
                         <hr />
                                             
                         <div class="row-fluid">
                             
-                            <div class="pull-right">
-                                <a href="/post/h3-keonpeoreonseureul-danyeooda" class="btn btn-info">KTH H3 컨퍼런스를 다녀오다! <i class="icon-white icon-chevron-right"></i></a>
-                            </div>
-                            
 
                             
                             <div class="pull-left">
-                                <a href="/post/beulrogeu-ijeonhabnida-^^" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> 블로그 이전했어요. ^^</a>
+                                <a href="/post/h3-keonpeoreonseureul-danyeooda" class="btn btn-info"><i class="icon-white icon-chevron-left"></i> KTH H3 컨퍼런스를 다녀오다!</a>
                             </div>
                             
                         </div>
@@ -256,7 +301,11 @@
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
             <!---->
-            <!--<a href="/tag/shopping">shopping</a>&nbsp;-->
+            <!--<a href="/tag/android">android</a>&nbsp;-->
+            <!---->
+            <!--<a href="/tag/tdd">tdd</a>&nbsp;-->
+            <!---->
+            <!--<a href="/tag/development">development</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
