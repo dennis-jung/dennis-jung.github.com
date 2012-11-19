@@ -8,7 +8,7 @@
 @import url(reset.css);
 
 BODY {
-	font:25px/1.8 'PT Sans', sans-serif;
+	font:25px/1.8 AppleSDGothicNeo-Thin, 'PT Sans Narrow', sans-serif;
 	counter-reset:paging;
 	}
 
@@ -39,7 +39,9 @@ BODY {
 .slide header, .slide h2 {
 	margin:0 0 58px;
 	color:#666;
-	font:bold 40px/1.13 'PT Sans Narrow', sans-serif;
+	/*font-weight: bold;*/
+	font-size: 1.6em;
+	font-family: AppleSDGothicNeo-SemiBold;
 	}
 
 /* Elements */
